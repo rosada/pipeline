@@ -8,6 +8,7 @@ node {
    stage('test') {
      nodejs(nodeJSInstallationName: 'nodejs') {
        sh 'npm install ms -S'
+       sh 'npm install inherits'
        sh 'npm install --only=dev'
        sh 'npm test'
      }
